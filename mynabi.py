@@ -1,13 +1,12 @@
 import os
-from selenium.webdriver import Chrome, ChromeOptions
-from selenium.webdriver.firefox.options import Options
 import time
 import pandas as pd
+
+from selenium.webdriver import Chrome, ChromeOptions
 from webdriver_manager.chrome import ChromeDriverManager
 
+
 # Chromeを起動する関数
-
-
 def start_chrome(use_headless: bool):
     options = ChromeOptions()
 
@@ -27,9 +26,8 @@ def start_chrome(use_headless: bool):
     return Chrome(ChromeDriverManager().install(),options=options)
     
 
+
 # main処理
-
-
 def main():
     search_keyword = "高収入"
     # driverを起動
